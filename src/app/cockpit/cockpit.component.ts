@@ -4,6 +4,6 @@ import { Component } from '@angular/core'
   selector: 'app-cockpit',
   templateUrl: './cockpit.component.html'
 })
-export class CockpitElement {
+export class CockpitComponent {
 
 }
