@@ -5,7 +5,7 @@ import { Component } from '@angular/core'
   templateUrl: './cockpit.component.html'
 })
 export class CockpitComponent {
-  serverElements = [];
+  
   newServerName = '';
   newServerContent = '';
 
