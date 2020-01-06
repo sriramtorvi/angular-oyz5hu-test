@@ -8,15 +8,15 @@ import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/cor
 export class CockpitComponent {
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   @Output() blueprintCreated =  new EventEmitter<{serverName: string, serverContent: string}>();
-  newServerName = '';
+  //newServerName = '';
   newServerContent = '';
   
 
-  onAddServer() {
-    this.serverCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent});
+  onAddServer(serverNameInput: HTMLInputElement) {
+    this.serverCreated.emit({serverName: serverNameInput.value, serverContent: this.newServerContent});
   }
 
-  onAddBlueprint() {
-    this.blueprintCreated.emit({serverName: this.newServerName, serverContent: this.newServerContent});
+  onAddBlueprint(serverNameInput: HTMLInputElement) {
+    this.blueprintCreated.emit({serverName: serverNameInput.value, serverContent: this.newServerContent});
   }
 }
