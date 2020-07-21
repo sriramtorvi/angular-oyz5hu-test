@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+<<<<<<< HEAD
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <ul class="nav nav-tabs">
         <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}"><a routerLink="/">Home</a></li>
@@ -11,6 +12,15 @@
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <router-outlet></router-outlet>
+=======
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+      <hr>
+      <app-account
+        *ngFor="let acc of accounts; let i = index"
+        [account]="acc"
+        [id]="i"></app-account>
+>>>>>>> 24b379d35d859ce1e18f0d7744a210a0ecc44f84
     </div>
   </div>
 </div>
